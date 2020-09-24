@@ -67,9 +67,11 @@ export class ContactListComponent implements OnInit {
 
 //Sorting functions
 const sortContactListByName = (contactA: Contact, contactB: Contact) => {
-  if (contactA.name > contactB.name) {
+  let a = contactA.name.toLowerCase();
+  let b = contactB.name.toLowerCase();
+  if (a > b) {
     return 1;
-  } else if (contactA.name < contactB.name) {
+  } else if (a < b) {
     return -1;
   }
   return 0;
