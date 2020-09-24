@@ -5,7 +5,7 @@
  */
 export class Contact {
   constructor(
-    public id: number,
+    public id: number = 0,
     public name: string,
     public address: string,
     public email: string,

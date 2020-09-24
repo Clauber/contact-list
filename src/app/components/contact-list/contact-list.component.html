@@ -1,4 +1,12 @@
 <div class="contact-list">
+  <app-add-contact
+    (submitContact)="onCreate($event)"
+    (submitEditContact)="onUpdate($event)"
+    (cancelEdit)="cancelEdit()"
+    [isEditing]="isEditing"
+    [editingContact]="editingContact"
+  ></app-add-contact>
+  <!-- I'd export the dropdown to its own component, but since it's so small I'll leave it here -->
   <div class="dropdown">
     <span>Sorted by: {{ sortedBy }}</span>
     <div class="dropdown-content">
@@ -10,5 +18,7 @@
   <app-contact
     *ngFor="let contact of contactList"
     [contact]="contact"
+    (deleteContact)="onDelete($event)"
+    (editContact)="onEdit($event)"
   ></app-contact>
 </div>

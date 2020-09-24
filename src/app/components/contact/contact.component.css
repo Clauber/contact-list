@@ -6,6 +6,8 @@
     background-color: #dedede;
 }
 .contact:hover {
-    cursor: pointer;
     background-color: #717171;
+}
+.options .option:nth-child(2n) {
+    margin-left: 10px;
 }

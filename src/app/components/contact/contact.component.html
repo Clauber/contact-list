@@ -1,6 +1,14 @@
 <div class="contact">
-  <p>Name: {{ contact.name }}</p>
-  <p>Address: {{ contact.address }}</p>
-  <p>Email: {{ contact.email }}</p>
-  <p>Phone: {{ contact.phone }}</p>
+  <div class="contact-information">
+    <p>Name: {{ contact.name }}</p>
+    <p>Address: {{ contact.address }}</p>
+    <p>Email: {{ contact.email }}</p>
+    <p>Phone: {{ contact.phone }}</p>
+  </div>
+  <div class="options">
+    <button class="option btn" (click)="emmitEdit(contact)">Edit</button>
+    <button class="option btn btn-warning" (click)="emmitDelete(contact)">
+      Delete
+    </button>
+  </div>
 </div>

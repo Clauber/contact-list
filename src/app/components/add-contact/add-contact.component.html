@@ -1,0 +1,33 @@
+<div class="add-contact">
+  <div class="contact-information">
+    <input type="text" name="name" [(ngModel)]="name" placeholder="Full Name" />
+    <input
+      type="text"
+      name="address"
+      [(ngModel)]="address"
+      placeholder="Address"
+    />
+    <input type="text" name="email" [(ngModel)]="email" placeholder="Email" />
+    <input
+      type="number"
+      name="phone"
+      [(ngModel)]="phoneNumber"
+      placeholder="Phone Number"
+    />
+  </div>
+  <div class="options">
+    <button
+      class="option btn"
+      *ngIf="!isEditing; else editContactRender"
+      (click)="onCreate()"
+    >
+      Create
+    </button>
+    <ng-template #editContactRender>
+      <button class="option btn" (click)="onEdit()">Submit Changes</button>
+      <button class="option btn btn-warning" (click)="onCancel()">
+        Cancel
+      </button>
+    </ng-template>
+  </div>
+</div>
