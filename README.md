@@ -1,27 +1,40 @@
-# ContactList
+# Contact List
 
+This is a sample app to test basic knowledge and features on the Angular Framework.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.
 
-## Development server
+## Installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Use the package manager [npm](https://www.npmjs.com) to install Contact list.
 
-## Code scaffolding
+```bash
+npm install
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Usage
 
-## Build
+Please, use the angular development server to try out this project
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```bach
+ng serve --open
+```
 
-## Running unit tests
+## Live sample
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+https://nothereyet.com
 
-## Running end-to-end tests
+## Requirements
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+The basic requirements for this application are:
 
-## Further help
+- Ability to add, edit, and delete contacts
+- Contacts should have a minimum set of fields:
+  - Name
+  - Address
+  - Email
+  - Phone
+- Ability to view all contacts in a list sorted alphabetically by name
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)

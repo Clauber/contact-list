@@ -1,0 +1,14 @@
+<div class="contact-list">
+  <div class="dropdown">
+    <span>Sorted by: {{ sortedBy }}</span>
+    <div class="dropdown-content">
+      <p *ngFor="let id of sortingIDs" (click)="changeSorting(id)">
+        {{ sortingLabels[id] }}
+      </p>
+    </div>
+  </div>
+  <app-contact
+    *ngFor="let contact of contactList"
+    [contact]="contact"
+  ></app-contact>
+</div>
