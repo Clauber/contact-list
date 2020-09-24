@@ -22,30 +22,34 @@ export class ContactListComponent implements OnInit {
   }
 
   //CRUD Operations(except for read for obvious reasons)
+  //Delete
   onDelete(contact: Contact) {
     this.contactList = this.contactList.filter((c) => c.id !== contact.id);
   }
+  //Getting into edit mode
   onEdit(contact: Contact) {
     this.isEditing = true;
     this.editingContact = contact;
   }
+  //Getting out of edit more
+  cancelEdit() {
+    this.isEditing = false;
+    this.editingContact = null;
+  }
+  //Updating
   onUpdate(contact: Contact) {
-    console.log('contact', contact);
     let contactIndex = this.contactList.findIndex(
       (currentContact) => currentContact.id === contact.id
     );
     this.contactList[contactIndex] = contact;
   }
+  //Creating
   onCreate(contact: Contact) {
     contact.id = this.contactList[this.contactList.length - 1].id + 1;
     this.contactList.push(contact);
   }
-  cancelEdit() {
-    this.isEditing = false;
-    this.editingContact = null;
-  }
 
-  //Sorting
+  //Sorting functions
   changeSorting = (option: SortingID) => {
     if (sortingLabels[option] === this.sortedBy) {
       return;

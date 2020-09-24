@@ -65,13 +65,12 @@ export class AddContactComponent implements OnInit {
       this.phoneNumber
     );
     this.submitEditContact.emit(newContact);
+    //Now we will let the contact-list know we are not in edit mode anymore and clear the fields
     this.onCancel();
-    this.clearAllFields();
   }
 
   onCancel() {
     this.cancelEdit.emit();
-    this.editingContact = null;
     this.clearAllFields();
   }
 
