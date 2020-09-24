@@ -21,7 +21,7 @@ ng serve --open
 
 ## Live sample
 
-https://nothereyet.com
+https://clauber.github.io/contact-list
 
 ## Requirements
 
